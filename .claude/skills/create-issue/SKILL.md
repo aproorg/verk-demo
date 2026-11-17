@@ -1,6 +1,6 @@
 ---
 name: create-issue
-description: Skrifar vel afmarkað issue (hegðun, samþykktarskilyrði, utan sviðs) úr stuttri lýsingu og stofnar það í GitLab eða GitHub eftir samþykki.
+description: Rannsakar kóðann út frá stuttri lýsingu, skrifar ítarlegt issue (hegðun, útfærsla, samþykktarskilyrði, utan sviðs) og stofnar það í GitLab eða GitHub eftir samþykki.
 argument-hint: "[stutt lýsing á verkinu]"
 disable-model-invocation: true
 ---
@@ -11,13 +11,14 @@ Remote verkefnisins:
 
 !`git remote -v`
 
-1. Lestu kóðann sem lýsingin snertir, nóg til að nefna rétta endapunkta, skrár og heiti.
-2. Skrifaðu issue-ið á ensku með þessari uppbyggingu:
+1. Rannsakaðu kóðann áður en þú skrifar. Finndu endapunkta, þjónustuaðferðir, líkön, próf og vefhluta sem verkið snertir, og hvernig sambærileg hegðun er útfærð í dag. Lestu `CLAUDE.md` og `.claude/rules/` til að fylgja venjum verkefnisins.
+2. Skrifaðu issue-ið á ensku, nógu ítarlegt til að hægt sé að útfæra það án frekari spurninga:
    - **Titill:** stuttur, í boðhætti.
-   - **Hegðun:** ein til tvær setningar um hvað á að gerast.
-   - **Samþykktarskilyrði:** listi af atriðum sem hægt er að prófa.
+   - **Hegðun:** hvað á að gerast, séð frá notandanum.
+   - **Útfærsla:** hvað breytist í hverju lagi, með réttum skráarheitum og auðkennum úr kóðanum: endapunktur (aðferð, slóð, stöðukóðar), líkön, þjónusta, vefur og próf.
+   - **Samþykktarskilyrði:** listi af atriðum sem hægt er að prófa, villutilvik meðtalin.
    - **Utan sviðs:** hvað á að láta í friði.
-3. Ef lýsingin dugar ekki til að skrifa samþykktarskilyrði: spurðu, ekki giska.
+3. Tæknilegar ákvarðanir sem kóðinn svarar tekur þú sjálfur og skráir í issue-ið. Spurðu aðeins um það sem hvorki lýsingin né kóðinn svarar, t.d. hvaða hegðun notandinn vill. Ekki giska á það.
 4. Sýndu issue-ið og bíddu eftir samþykki. Ekki stofna neitt fyrr.
 5. Eftir samþykki, eftir því hvar `origin` er:
    - GitLab: `glab issue create --title "<titill>" --description "<texti>"`

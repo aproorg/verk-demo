@@ -10,3 +10,4 @@ paths:
 - Notaðu `Service`-týpuna (`Annotated[TaskService, Depends(get_service)]`) fyrir dependency injection
 - Próf nota `client`- og `service`-fixture í `tests/test_tasks.py`, aldrei gögnin úr `seeded_service()`
 - Skilatýpur eru Pydantic-líkön, ekki `dict`
+- Aðgerð sem breytir stöðu á tilfangi sem er til er `PATCH /<tilföng>/{id}/<sögn>` án body og skilar uppfærða tilfanginu með `200`
