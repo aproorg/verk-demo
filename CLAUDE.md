@@ -3,10 +3,12 @@
 Full-stack sýnidæmi: verk og eigendur. `api/` er FastAPI, `web/` er Vite + React + TypeScript.
 
 ## Skipanir
-- Prófa API:   `cd api && uv run pytest`
-- Lint API:    `cd api && uv run ruff check .`
-- Athuga vef:  `cd web && npm run build` (tsc + vite build)
-- Keyra:       `cd api && uv run fastapi dev app/main.py` og `cd web && npm run dev`
+Allar skipanir eru í `Taskfile.yml` og keyra úr rótinni.
+- Allt grænt?: `task check` (test, lint, build)
+- Prófa API:   `task test` (eitt próf: `task test -- -k <nafn>`)
+- Lint, snið:  `task lint`, `task format`
+- Athuga vef:  `task build` (tsc + vite build)
+- Keyra:       `task dev` (API á :8000, vefur á :5173)
 
 ## Arkitektúr
 - `api/app/main.py` endapunktar, `services.py` viðskiptalógík, `models.py` Pydantic-líkön

@@ -1,0 +1,75 @@
+# https://taskfile.dev · `task` lists everything
+version: "3"
+
+tasks:
+  default:
+    silent: true
+    cmds:
+      - task --list
+
+  install:
+    desc: Install API and web dependencies
+    deps: [api:install, web:install]
+
+  api:install:
+    internal: true
+    dir: api
+    cmds:
+      - uv sync
+
+  web:install:
+    internal: true
+    dir: web
+    cmds:
+      - npm install
+    status:
+      - test -d node_modules
+
+  dev:
+    desc: Run API (:8000) and web (:5173) together
+    deps: [api, web]
+
+  api:
+    desc: Run the API with reload on http://localhost:8000/docs
+    dir: api
+    cmds:
+      - uv run fastapi dev app/main.py
+
+  web:
+    desc: Run the Vite dev server on http://localhost:5173
+    dir: web
+    deps: [web:install]
+    cmds:
+      - npm run dev
+
+  test:
+    desc: Run API tests (extra args after --, e.g. task test -- -k complete)
+    dir: api
+    cmds:
+      - uv run pytest {{.CLI_ARGS}}
+
+  lint:
+    desc: Lint the API with ruff
+    dir: api
+    cmds:
+      - uv run ruff check .
+
+  format:
+    desc: Format the API with ruff
+    dir: api
+    cmds:
+      - uv run ruff format .
+
+  build:
+    desc: Type-check and build the web app
+    dir: web
+    deps: [web:install]
+    cmds:
+      - npm run build
+
+  check:
+    desc: Everything that must be green before a commit (test, lint, build)
+    cmds:
+      - task: test
+      - task: lint
+      - task: build

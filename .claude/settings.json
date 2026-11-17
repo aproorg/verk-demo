@@ -1,9 +1,11 @@
 {
   "permissions": {
     "allow": [
-      "Bash(uv run pytest *)",
-      "Bash(uv run ruff *)",
-      "Bash(npm run build)",
+      "Bash(task check)",
+      "Bash(task test *)",
+      "Bash(task lint)",
+      "Bash(task format)",
+      "Bash(task build)",
       "Bash(git status *)",
       "Bash(git diff *)"
     ],

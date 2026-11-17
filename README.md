@@ -7,30 +7,24 @@ Lítið full-stack sýnidæmi fyrir námskeið í Claude Code: verk og eigendur.
 
 Öll gögn eru gervigögn.
 
-## Keyra
+## Skipanir
 
-Tveir gluggar:
-
-```sh
-cd api
-uv run fastapi dev app/main.py      # http://localhost:8000/docs
-```
+Allt keyrir í gegnum [Task](https://taskfile.dev) úr rót verkefnisins. `task` eitt og sér sýnir listann.
 
 ```sh
-cd web
-npm install
-npm run dev                         # http://localhost:5173
+task install     # uv sync og npm install
+task dev         # API á :8000 og vefur á :5173, saman
+task test        # pytest. Viðföng á eftir --: task test -- -k complete
+task lint        # ruff check
+task format      # ruff format
+task build       # tsc + vite build
+task check       # test, lint og build: allt sem þarf að vera grænt fyrir commit
 ```
 
-Vite sendir `/tasks` og `/owners` áfram á API-ið á porti 8000.
+`task api` og `task web` keyra hvort fyrir sig. Vite sendir `/tasks` og `/owners` áfram á API-ið.
 
-## Prófa
-
-```sh
-cd api && uv run pytest
-cd api && uv run ruff check .
-cd web && npm run build             # tsc + vite build
-```
+Þarf: [uv](https://docs.astral.sh/uv/), Node 20.19+ og Task (`winget install Task.Task`, `brew install go-task`).
+Án Task: skipanirnar standa í `Taskfile.yml`.
 
 ## Claude Code
 
