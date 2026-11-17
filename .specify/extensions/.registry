@@ -1,0 +1,19 @@
+{
+  "schema_version": "1.0",
+  "extensions": {
+    "gitlab": {
+      "version": "0.1.0",
+      "source": "local",
+      "manifest_hash": "sha256:b64e34a47692a091661cecc94b71337c9075810c43bed93f0cf9bb91bf26816d",
+      "enabled": true,
+      "priority": 10,
+      "registered_commands": {
+        "claude": [
+          "speckit.gitlab.specify"
+        ]
+      },
+      "registered_skills": [],
+      "installed_at": "2026-11-17T14:03:17.779974+00:00"
+    }
+  }
+}
