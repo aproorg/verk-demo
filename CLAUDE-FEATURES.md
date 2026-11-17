@@ -1,6 +1,6 @@
 # Claude Code í þessu repoi
 
-Þetta er sett upp á `main`. Hver lína er eitthvað sem hægt er að sýna. Greinin `start` er appið án alls þessa.
+Þetta er sett upp á `main`. Hver lína er eitthvað sem hægt er að sýna.
 
 | Eining | Skrá | Prófaðu |
 |---|---|---|

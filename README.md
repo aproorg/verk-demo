@@ -36,5 +36,3 @@ cd web && npm run build             # tsc + vite build
 
 Allt er sett upp á `main`: `CLAUDE.md` og `.claude/` með reglum, skills, subagentum, hooks, MCP og workflow.
 Sjá [CLAUDE-FEATURES.md](CLAUDE-FEATURES.md) fyrir yfirlit og eina sýnikennslu á hverja einingu.
-
-Greinin `start` er sama app án alls þessa, fyrir æfingar sem byrja á `/init`.
