@@ -1,0 +1,40 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(uv run pytest *)",
+      "Bash(uv run ruff *)",
+      "Bash(npm run build)",
+      "Bash(git status *)",
+      "Bash(git diff *)"
+    ],
+    "deny": [
+      "Read(./.env)",
+      "Read(./**/.env)",
+      "Bash(git push --force *)"
+    ]
+  },
+  "hooks": {
+    "PreToolUse": [
+      {
+        "matcher": "Bash",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "uv run --project \"$CLAUDE_PROJECT_DIR/api\" python \"$CLAUDE_PROJECT_DIR/.claude/hooks/protect_main.py\""
+          }
+        ]
+      }
+    ],
+    "PostToolUse": [
+      {
+        "matcher": "Edit|Write",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "uv run --project \"$CLAUDE_PROJECT_DIR/api\" python \"$CLAUDE_PROJECT_DIR/.claude/hooks/format_python.py\""
+          }
+        ]
+      }
+    ]
+  }
+}
