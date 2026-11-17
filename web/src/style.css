@@ -1,0 +1,40 @@
+:root {
+  font-family: system-ui, sans-serif;
+  color-scheme: light dark;
+}
+main {
+  max-width: 36rem;
+  margin: 3rem auto;
+  padding: 0 1rem;
+}
+ul {
+  list-style: none;
+  padding: 0;
+}
+li {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 0.6rem 0;
+  border-bottom: 1px solid color-mix(in srgb, currentColor 20%, transparent);
+}
+small {
+  opacity: 0.7;
+}
+form {
+  display: flex;
+  gap: 0.5rem;
+  margin-top: 1rem;
+}
+input {
+  flex: 1;
+}
+input,
+select,
+button {
+  font: inherit;
+  padding: 0.4rem 0.6rem;
+}
+[role="alert"] {
+  color: crimson;
+}

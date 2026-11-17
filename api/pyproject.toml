@@ -1,0 +1,21 @@
+[project]
+name = "verk-api"
+version = "0.1.0"
+description = "Tasks and owners API for the Claude Code seminar"
+requires-python = ">=3.11"
+dependencies = [
+    "fastapi[standard]>=0.163.1",
+]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["."]
+
+[dependency-groups]
+dev = [
+    "pytest>=9.2.0",
+    "ruff>=0.17.5",
+]
+
+[tool.ruff]
+line-length = 100
