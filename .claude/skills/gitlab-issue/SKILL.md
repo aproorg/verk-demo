@@ -7,7 +7,8 @@ argument-hint: "[issue-númer eða slóð]"
 Útfærðu GitLab issue $ARGUMENTS.
 
 1. Sæktu issue-ið með `glab issue view $ARGUMENTS --comments`.
-   Ef glab er ekki uppsett eða innskráð: biddu notandann að líma textann inn.
+   Ef `origin` er á GitHub: `gh issue view $ARGUMENTS --comments`.
+   Ef tólið er ekki uppsett eða innskráð: biddu notandann að líma textann inn.
 2. Dragðu saman samþykktarskilyrðin. Ef hegðun er óljós: spurðu, ekki giska.
 3. Búðu til grein sem heitir `<númer>-<stutt-lýsing>`.
 4. Leggðu fram áætlun og bíddu eftir samþykki.

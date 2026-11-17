@@ -6,6 +6,7 @@
 |---|---|---|
 | Minni verkefnisins | `CLAUDE.md` | `/memory`, `/context` |
 | Reglur eftir slóð | `.claude/rules/api.md`, `web.md` | Biddu Claude að opna `web/src/App.tsx` og svo `/context`: vef-reglan hleðst inn, API-reglan ekki |
+| Skill sem aðeins þú kallar á | `.claude/skills/create-issue/` | `/create-issue <lýsing>`. Claude ræsir hana aldrei sjálfur (`disable-model-invocation`) |
 | Skill með viðföngum | `.claude/skills/gitlab-issue/` | `/gitlab-issue 1` |
 | Skill með skeljarinnskoti og leyfðum tólum | `.claude/skills/verify/` | `/verify` |
 | Subagent á ódýrara líkani | `.claude/agents/issue-implementer.md` | „Notaðu issue-implementer á issue 1“ |
