@@ -33,6 +33,12 @@ export default function App() {
 
   return (
     <main>
+      <span className="unicorn unicorn-left" aria-hidden="true">
+        🦄
+      </span>
+      <span className="unicorn unicorn-right" aria-hidden="true">
+        🦄
+      </span>
       <h1>Verk</h1>
       {error && <p role="alert">{error}</p>}
       <ul>
