@@ -1,0 +1,1 @@
+../../../.specify/extensions/gitlab/.specify-dev/agent-commands/claude/speckit-gitlab-specify/SKILL.md

@@ -1,0 +1,33 @@
+schema_version: "1.0"
+
+extension:
+  id: gitlab
+  name: "GitLab Issue Intake"
+  version: "0.1.0"
+  description: "Fetch a GitLab issue and use it as the input to /speckit-specify"
+  author: verk-demo
+  license: MIT
+
+requires:
+  # 0.12.17: first release that rewrites extension-local "scripts/..." paths
+  # and resolves __SPECKIT_COMMAND_*__ tokens in auto-registered skills.
+  speckit_version: ">=0.12.17"
+  tools:
+    - name: git
+      required: true
+      description: "Optional branch switch to <iid>-<slug>"
+    - name: glab
+      required: true
+      description: "Fetches issues and comments via glab api; owns GitLab auth"
+      install_url: "https://gitlab.com/gitlab-org/cli"
+
+provides:
+  commands:
+    - name: speckit.gitlab.specify
+      file: commands/speckit.gitlab.specify.md
+      description: "Create a feature spec from a GitLab issue"
+
+tags:
+  - "gitlab"
+  - "issues"
+  - "integration"
