@@ -39,6 +39,12 @@ export default function App() {
       <span className="unicorn unicorn-right" aria-hidden="true">
         🦄
       </span>
+      <span className="frog frog-left" aria-hidden="true">
+        🐸
+      </span>
+      <span className="frog frog-right" aria-hidden="true">
+        🐸
+      </span>
       <h1>Verk</h1>
       {error && <p role="alert">{error}</p>}
       <ul>
