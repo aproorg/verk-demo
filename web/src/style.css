@@ -38,3 +38,18 @@ button {
 [role="alert"] {
   color: crimson;
 }
+.unicorn {
+  position: fixed;
+  top: 0.5rem;
+  font-size: 2.5rem;
+  line-height: 1;
+  pointer-events: none;
+  user-select: none;
+}
+.unicorn-left {
+  left: 0.5rem;
+  transform: scaleX(-1);
+}
+.unicorn-right {
+  right: 0.5rem;
+}
