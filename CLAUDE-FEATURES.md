@@ -1,6 +1,6 @@
 # Claude Code í þessu repoi
 
-Greinin `features` bætir þessu við appið á `main`. Hver lína er eitthvað sem hægt er að sýna.
+Þetta er sett upp á `main`. Hver lína er eitthvað sem hægt er að sýna. Greinin `start` er appið án alls þessa.
 
 | Eining | Skrá | Prófaðu |
 |---|---|---|

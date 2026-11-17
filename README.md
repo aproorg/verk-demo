@@ -32,7 +32,9 @@ cd api && uv run ruff check .
 cd web && npm run build             # tsc + vite build
 ```
 
-## Greinar
+## Claude Code
 
-- `main` · bara appið. Ekkert sett upp fyrir Claude Code. Hér byrjar námskeiðið.
-- `features` · sama app með `CLAUDE.md` og `.claude/`: reglur, skills, subagentar, hooks, MCP og workflow. Sjá `CLAUDE-FEATURES.md` á þeirri grein.
+Allt er sett upp á `main`: `CLAUDE.md` og `.claude/` með reglum, skills, subagentum, hooks, MCP og workflow.
+Sjá [CLAUDE-FEATURES.md](CLAUDE-FEATURES.md) fyrir yfirlit og eina sýnikennslu á hverja einingu.
+
+Greinin `start` er sama app án alls þessa, fyrir æfingar sem byrja á `/init`.
