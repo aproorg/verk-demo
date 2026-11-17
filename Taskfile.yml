@@ -26,8 +26,10 @@ tasks:
       - test -d node_modules
 
   dev:
-    desc: Run API (:8000) and web (:3000) together
-    deps: [api, web]
+    desc: Run API (:8000) and web (:3000) together. One Ctrl+C stops both
+    deps: [web:install]
+    cmds:
+      - uv run --project api python scripts/dev.py
 
   api:
     desc: Run the API with reload on http://localhost:8000/docs
