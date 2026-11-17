@@ -1,0 +1,16 @@
+{
+  "name": "verk-dev",
+  "description": "Frá issue í merge request",
+  "author": { "name": "APRÓ" },
+  "skills": [
+    "./.claude/skills/create-issue",
+    "./.claude/skills/gitlab-issue",
+    "./.claude/skills/verify"
+  ],
+  "agents": [
+    "./.claude/agents/code-reviewer.md",
+    "./.claude/agents/issue-implementer.md"
+  ],
+  "workflows": ["./.claude/workflows/review-branch.js"],
+  "outputStyles": ["./.claude/output-styles/kennari.md"]
+}

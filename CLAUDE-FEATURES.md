@@ -17,11 +17,26 @@
 | MCP | `.mcp.json` | `/mcp`. Playwright: „Opnaðu localhost:3000 og bættu við verki“ |
 | Workflow | `.claude/workflows/review-branch.js` | `/review-branch`, fylgstu með í `/workflows` |
 | Úttaksstíll | `.claude/output-styles/kennari.md` | `/output-style Kennari` |
+| Plugin og marketplace | `.claude-plugin/marketplace.json`, `plugin.json` | `claude plugin validate .`, svo `/plugin marketplace add aproorg/verk-demo` í öðru repoi |
 
-## Bætist við á námskeiðinu
+## Spec Kit
 
-- **Spec Kit:** `git switch -c speckit` og `specify init --here --force --integration claude`. Bætir við `.specify/` og `.claude/skills/speckit-*`.
-- **Marketplace:** skills og agentar héðan eru afritaðir í `plugins/<nafn>/` í sér repoi í GitLab og settir upp með `/plugin`.
+`.specify/` og `.claude/skills/speckit-*` eru á `main`, og sáttmálinn er í `.specify/memory/constitution.md`.
+`specify init --here --integration claude --force` uppfærir uppsetninguna hér og setur hana upp frá grunni í öðru repoi.
+
+## Þetta repo er líka marketplace
+
+`.claude-plugin/plugin.json` bendir á skrárnar í `.claude/`. Ekkert er afritað: sama skráin er bæði verkefnisuppsetning hér og plugin annars staðar.
+
+```text
+/plugin marketplace add aproorg/verk-demo
+/plugin install verk-dev@verk-demo
+/verk-dev:gitlab-issue 1
+```
+
+- **Fylgir með:** skills `create-issue`, `gitlab-issue` og `verify`, subagentarnir `code-reviewer` og `issue-implementer`, workflow `review-branch`, úttaksstíllinn `Kennari` og Playwright úr `.mcp.json`.
+- **Fylgir ekki:** hooks, heimildir, reglur og `CLAUDE.md`. Þau eiga við þetta verkefni og eru áfram í `.claude/`. Spec Kit skills koma með `specify init`.
+- Allt úr plugin fær forskeytið `verk-dev:`. Ný skill fer í listann í `plugin.json`.
 
 ## Gott að vita
 

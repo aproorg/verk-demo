@@ -1,0 +1,12 @@
+{
+  "name": "verk-demo",
+  "description": "Verkfærin úr verk-demo",
+  "owner": { "name": "APRÓ" },
+  "plugins": [
+    {
+      "name": "verk-dev",
+      "source": "./",
+      "description": "Frá issue í merge request"
+    }
+  ]
+}

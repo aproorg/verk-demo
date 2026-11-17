@@ -30,3 +30,10 @@ task check       # test, lint og build: allt sem þarf að vera grænt fyrir com
 
 Allt er sett upp á `main`: `CLAUDE.md` og `.claude/` með reglum, skills, subagentum, hooks, MCP og workflow.
 Sjá [CLAUDE-FEATURES.md](CLAUDE-FEATURES.md) fyrir yfirlit og eina sýnikennslu á hverja einingu.
+
+Uppsetningin er líka plugin. Í öðru repoi:
+
+```text
+/plugin marketplace add aproorg/verk-demo
+/plugin install verk-dev@verk-demo
+```
