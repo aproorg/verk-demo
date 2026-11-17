@@ -26,16 +26,16 @@ tasks:
       - test -d node_modules
 
   dev:
-    desc: Run API (:8000) and web (:3000) together. One Ctrl+C stops both
-    deps: [web:install]
-    cmds:
-      - uv run --project api python scripts/dev.py
+    desc: Run API (:8000) and web (:3000) together
+    deps: [api, web]
 
   api:
     desc: Run the API with reload on http://localhost:8000/docs
     dir: api
     cmds:
-      - uv run fastapi dev app/main.py
+      # not `fastapi dev`: its CLI asks the terminal for its colours and hangs
+      # when Vite is reading the same terminal
+      - uv run uvicorn app.main:app --reload --port 8000
 
   web:
     desc: Run the Vite dev server on http://localhost:3000
