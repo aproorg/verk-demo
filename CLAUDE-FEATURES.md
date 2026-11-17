@@ -13,7 +13,7 @@
 | Heimildir | `.claude/settings.json` → `permissions` | `/permissions`. Próf keyra án þess að spurt sé, `.env` er aldrei lesið |
 | Hook fyrir tólakall | `.claude/hooks/protect_main.py` | Biddu Claude að commita á `main`: kallinu er hafnað |
 | Hook eftir tólakall | `.claude/hooks/format_python.py` | Hver `.py`-skrá sem Claude breytir er sniðin með ruff |
-| MCP | `.mcp.json` | `/mcp`. Playwright: „Opnaðu localhost:5173 og bættu við verki“ |
+| MCP | `.mcp.json` | `/mcp`. Playwright: „Opnaðu localhost:3000 og bættu við verki“ |
 | Workflow | `.claude/workflows/review-branch.js` | `/review-branch`, fylgstu með í `/workflows` |
 | Úttaksstíll | `.claude/output-styles/kennari.md` | `/output-style Kennari` |
 

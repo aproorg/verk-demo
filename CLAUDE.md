@@ -8,7 +8,7 @@ Allar skipanir eru í `Taskfile.yml` og keyra úr rótinni.
 - Prófa API:   `task test` (eitt próf: `task test -- -k <nafn>`)
 - Lint, snið:  `task lint`, `task format`
 - Athuga vef:  `task build` (tsc + vite build)
-- Keyra:       `task dev` (API á :8000, vefur á :5173)
+- Keyra:       `task dev` (API á :8000, vefur á :3000)
 
 ## Arkitektúr
 - `api/app/main.py` endapunktar, `services.py` viðskiptalógík, `models.py` Pydantic-líkön

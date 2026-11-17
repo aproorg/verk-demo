@@ -26,7 +26,7 @@ tasks:
       - test -d node_modules
 
   dev:
-    desc: Run API (:8000) and web (:5173) together
+    desc: Run API (:8000) and web (:3000) together
     deps: [api, web]
 
   api:
@@ -36,7 +36,7 @@ tasks:
       - uv run fastapi dev app/main.py
 
   web:
-    desc: Run the Vite dev server on http://localhost:5173
+    desc: Run the Vite dev server on http://localhost:3000
     dir: web
     deps: [web:install]
     cmds:

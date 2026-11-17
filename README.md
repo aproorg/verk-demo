@@ -13,7 +13,7 @@ Allt keyrir í gegnum [Task](https://taskfile.dev) úr rót verkefnisins. `task`
 
 ```sh
 task install     # uv sync og npm install
-task dev         # API á :8000 og vefur á :5173, saman
+task dev         # API á :8000 og vefur á :3000, saman
 task test        # pytest. Viðföng á eftir --: task test -- -k complete
 task lint        # ruff check
 task format      # ruff format
